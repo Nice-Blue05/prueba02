@@ -1,0 +1,208 @@
+/* Variables CSS para manejo de colores */
+:root {
+    --primary-color: #007bff; /* Azul */
+    --secondary-color: #6c757d; /* Gris */
+    --background-color: #f4f7f6; /* Fondo ligero */
+    --text-color: #333;
+    --card-background: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* --- Encabezado Principal (Hero) --- */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.hero h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+}
+
+.hero h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* --- Contenedor Principal --- */
+.container {
+    max-width: 900px; /* Reducimos para que las pestañas se vean mejor */
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* --- Estilo de las Tarjetas (Contenedor de Pestañas) --- */
+.card {
+    background: var(--card-background);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color); /* Sombra más pronunciada */
+}
+
+/* --- Estilos de Pestañas --- */
+.tabs-container {
+    padding: 0; /* Quitamos el padding de la tarjeta principal */
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid #ddd;
+    background-color: #f9f9f9;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow-x: auto; /* Permite scroll horizontal en móviles */
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    transition: color 0.3s, border-bottom 0.3s;
+    outline: none;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.tab-link:hover {
+    color: var(--primary-color);
+}
+
+.tab-link.active {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    background-color: var(--card-background);
+}
+
+.tab-content {
+    padding: 25px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: none; /* Ocultar por defecto */
+}
+
+.tab-content.active {
+    display: block; /* Mostrar la pestaña activa */
+}
+
+.tab-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* --- Listas y Habilidades (Mantiene estilos anteriores) --- */
+.tab-content ul {
+    list-style: none; 
+}
+
+.tab-content ul li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.tab-content ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills li {
+    background: var(--secondary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    list-style: none; 
+}
+
+.skills li::before {
+    content: none; 
+}
+
+.skills li:hover {
+    background: var(--primary-color);
+}
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    margin-left: 10px;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+/* --- Pie de Página --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #f4f7f6;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* --- Media Queries (Móvil) --- */
+@media (max-width: 600px) {
+    .tab-buttons {
+        justify-content: space-between;
+    }
+    .tab-link {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
