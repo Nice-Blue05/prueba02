@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de jeremy - Informática</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>jeremy</h1>
+            <h2>Estudiante de Computación Informática (4to Ciclo)</h2>
+            <p id="resumen-profesional">
+                Apasionado por el desarrollo de software y la resolución de problemas, con dominio en Python, Java y JavaScript. Busco aplicar mis conocimientos técnicos y mi proactividad en un entorno de oficina.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="tabs-container card">
+            
+            <div class="tab-buttons">
+                <button class="tab-link active" data-tab="tab-habilidades">💻 Habilidades</button>
+                <button class="tab-link" data-tab="tab-funciones">🚀 Experiencia</button>
+                <button class="tab-link" data-tab="tab-perfil">⭐ Perfil</button>
+                <button class="tab-link" data-tab="tab-contacto">📧 Contacto</button>
+            </div>
+
+            <div id="tab-habilidades" class="tab-content active">
+                <h3>Lenguajes y Herramientas</h3>
+                <ul id="skills-list" class="skills">
+                    <li data-skill="python">Python</li>
+                    <li data-skill="java">Java</li>
+                    <li data-skill="javascript">JavaScript</li>
+                    <li>Proyectos Sencillos</li>
+                    <li>Software de Oficina (Word, Excel)</li>
+                </ul>
+            </div>
+
+            <div id="tab-funciones" class="tab-content">
+                <h3>Funciones y Responsabilidades</h3>
+                <ul id="funciones-list">
+                    <li>Verificar el cumplimiento de las reglas del juego y tabla de pagos.</li>
+                    <li>Reportar errores en los juegos.</li>
+                    <li>Elaborar y validar formatos de prueba.</li>
+                </ul>
+            </div>
+
+            <div id="tab-perfil" class="tab-content">
+                <h3>Información Adicional</h3>
+                <ul>
+                    <li>Disposición para el **aprendizaje y concentración** constante.</li>
+                    <li>**Joven Proactivo** y con alta iniciativa.</li>
+                    <li>Disponibilidad inmediata para cumplir con el horario de oficina.</li>
+                </ul>
+            </div>
+            
+            <div id="tab-contacto" class="tab-content">
+                <h3>Contacto</h3>
+                <p>Correo: 60939929@EA.com]</p>
+                <p>Teléfono: 999 999 998</p>
+                <a href="[Link a tu LinkedIn/GitHub]" target="_blank" class="btn">Ver GitHub / LinkedIn</a>
+                <button id="show-message-btn" class="btn secondary-btn">¡Clic para saludar!</button>
+                <p id="message-area" style="margin-top: 15px; font-weight: bold; color: var(--primary-color); display: none;">¡Gracias por visitar mi perfil!</p>
+            </div>
+
+        </div> </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 jeremy. Desarrollado con HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
